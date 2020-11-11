@@ -1,1 +1,3 @@
 # learning-golang
+./hello
+./opensourcelive
