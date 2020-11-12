@@ -11,9 +11,17 @@ type person struct {
 	weight float64
 }
 
-func (guy person) lb2kilo() float64 {
+// lb->kilo method with value receiver
+// func (guy person) lb2kilo() float64 {
+// 	// const rate float64 = 0.453592
+// 	return float64(guy.weight * rate)
+// }
+
+// lb->kilo method with pointer receiver
+func (guy *person) lb2kilo() float64 {
 	// const rate float64 = 0.453592
-	return float64(guy.weight * rate)
+	guy.weight = guy.weight * rate
+	return float64(guy.weight)
 }
 
 func main() {
